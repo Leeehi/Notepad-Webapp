@@ -1,0 +1,33 @@
+.create {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  
+  background-color: rebeccapurple;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.create img {
+  width: 35px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.sample-box {
+  height: 300px;
+  background-color: rebeccapurple;
+  border-radius: 15px;
+}

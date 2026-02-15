@@ -1,0 +1,20 @@
+:root {
+  --dark-teal: #006D77;
+  --light-teal: #83C5BE;
+  --pale-blue: #EDF6F9;
+  --light-peach: #FFDDD3;
+  --warm-terracotta: #E29578;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--pale-blue);
+  font-family: League Spartan, Arial;
+  padding-top: 80px;
+  padding: 80px 20px 0 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
