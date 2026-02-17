@@ -20,11 +20,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: black;
   /* background-color: blue; */
 }
 
-.left-side div {
+.left-side a {
   font-size: 35px;
+  color: black;
 }
 
 .middle {
