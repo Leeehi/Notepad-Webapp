@@ -11,6 +11,7 @@
   box-shadow: 1px 1px 10px hsl(0, 0%, 0%, 0.75);
   border: none;
   cursor: pointer;
+  z-index: 97
 }
 
 .create:active {
@@ -31,6 +32,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* This is the normal grid style*/

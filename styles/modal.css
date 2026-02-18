@@ -1,0 +1,141 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(6px); /* Blur everything behind it */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 98;
+  /* pointer-events: none;
+  opacity: 0; */
+}
+
+.modal {
+  position: fixed;
+  padding: 30px 30px 20px 30px;
+  top: 100px;
+  bottom: 50px;
+  left: 300px;
+  right: 300px;
+  background-color: var(--pale-blue);
+  box-shadow: 1px 1px 900px black;
+  border-radius: 24px;
+  z-index: 99;
+  /* pointer-events: none;
+  opacity: 0; */
+}
+
+/* .modal-overlay.visible, .modal.visible {
+  pointer-events: all;
+  opacity: 1;
+} */
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: green;
+  border-radius: 0 0 24px 24px;
+}
+
+.note-title {
+  height: 25px;
+  width: 100%;
+  font-size: 30px;
+  border: none;
+  background-color: var(--pale-blue);
+  font-family: Roboto, Arial;
+}
+
+.note-title:focus {
+  border: none;
+  outline: none;
+}
+
+.note-body {
+  height: 22rem;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  border: none;
+  background-color: var(--pale-blue);
+  font-family: Roboto, Arial;
+  /* background-color: black; */
+  resize: none;
+}
+
+.note-body:focus {
+  border: none;
+  outline: none;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#color-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 10px;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.dark-teal { 
+  background-color: var(--dark-teal); 
+}
+
+.light-teal { 
+  background-color: var(--light-teal); 
+}
+
+.light-peach { 
+  background-color: var(--light-peach); 
+}
+
+.warm-terracotta { 
+  background-color: var(--warm-terracotta); 
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 235px;
+  top: -100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1px;
+}
+
+/* .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+} */
+
+.save-note {
+  padding: 10px 15px;
+}

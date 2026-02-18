@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./styles/general.css">
   <link rel="stylesheet" href="./styles/header.css">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/modal.css">
 
   <title>Notepad</title>
 </head>
@@ -38,6 +39,35 @@
 
   <main>
     <div class="notes-grid">
+    </div>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="note-content">
+          <div class="title">
+            <input type="text" class="note-title" placeholder="Title">
+          </div>
+
+          <div class="body">
+            <textarea class="note-body" rows="4" cols="50" placeholder="Take a note..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="dropdown">
+            <label for="color-btn">Color:</label>
+            <button id="color-btn"></button>
+            <div class="dropdown-content">
+              <div class="color-swatch dark-teal" data-color="var(--dark-teal)"></div>
+              <div class="color-swatch light-teal" data-color="var(--light-teal)"></div>
+              <div class="color-swatch light-peach" data-color="var(--light-peach)"></div>
+              <div class="color-swatch warm-terracotta" data-color="var(--warm-terracotta)"></div>
+            </div>
+          </div>
+          <div>
+            <button class="save-note">Save</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   

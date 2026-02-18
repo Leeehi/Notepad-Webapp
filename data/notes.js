@@ -189,3 +189,7 @@ export const notes = [
     }
   }
 ];
+
+//function saveNotes() {
+//   localStorage.setItem('notes', JSON.stringify(notes));
+// }
