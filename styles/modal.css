@@ -11,8 +11,8 @@
   justify-content: center;
   align-items: center;
   z-index: 98;
-  /* pointer-events: none;
-  opacity: 0; */
+  pointer-events: none;
+  opacity: 0;
 }
 
 .modal {
@@ -26,14 +26,14 @@
   box-shadow: 1px 1px 900px black;
   border-radius: 24px;
   z-index: 99;
-  /* pointer-events: none;
-  opacity: 0; */
+  pointer-events: none;
+  opacity: 0;
 }
 
-/* .modal-overlay.visible, .modal.visible {
+.modal-overlay.visible, .modal.visible {
   pointer-events: all;
   opacity: 1;
-} */
+}
 
 .modal-footer {
   position: absolute;
@@ -59,6 +59,10 @@
   outline: none;
 }
 
+.note-title::placeholder, .note-body::placeholder {
+  color: black;
+}
+
 .note-body {
   height: 22rem;
   width: 100%;
@@ -68,7 +72,6 @@
   border: none;
   background-color: var(--pale-blue);
   font-family: Roboto, Arial;
-  /* background-color: black; */
   resize: none;
 }
 
@@ -119,22 +122,18 @@
 .dropdown {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 235px;
-  top: -100px;
+  right: -40px;
+  bottom: 0;
   background: #fff;
   border: 1px solid #ccc;
   padding: 1px;
 }
-
-/* .dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-} */
 
 .save-note {
   padding: 10px 15px;

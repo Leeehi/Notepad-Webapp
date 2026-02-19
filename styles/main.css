@@ -53,7 +53,6 @@ main {
   max-width: 100%;          /* prevent overflow */
   /* margin: 0 auto;           center the grid */
   padding: 0 20px;          /* add breathing room on sides */
-
 }
 
 /* This is the normal grid style*/
@@ -74,7 +73,32 @@ main {
   padding:20px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease-in-out;
-  color: black;
+  position: relative;
+}
+
+.delete-note {
+  opacity: 0;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out
+}
+
+.delete-note img {
+  width: 15px;
+}
+
+.delete-note:hover {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.sample-box:hover .delete-note {
+  opacity: 1;
 }
 
 .sample-box:hover {
@@ -86,10 +110,13 @@ main {
   white-space: nowrap;       /* force single line */
   overflow: hidden;          /* hide overflow */
   text-overflow: ellipsis;   /* show ... */
+  color: black;
+  cursor: default;
 }
 
 .sample-box .note {
   font-size: 18px;
+  color: black;
   line-height: 20px;
   margin-top: 10px;
   display: -webkit-box;        /* create a flex-like box */
@@ -97,4 +124,5 @@ main {
   line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  cursor: default;
 }
