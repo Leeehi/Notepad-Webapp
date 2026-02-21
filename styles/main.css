@@ -65,8 +65,8 @@ main {
 /* This is the mansory style*/
 .sample-box {
   display: inline-block;
-  margin-bottom: 20px;
-  width: 100%;              /* fit inside column */
+  margin-bottom: 10px;
+  width: 325px;              /* fit inside column */
   box-sizing: border-box;   /* include padding in width calculation */
   background-color: rebeccapurple;
   border-radius: 15px;
