@@ -1,11 +1,20 @@
 import { notes } from "../data/save.js";
-import { addNote, removeNote, getNote } from "../data/save.js";
+import { addNote, removeNote, getNote, searchNotes } from "../data/save.js";
 
 function Indexfunction() {
 
   let indexHTML = '';
 
-  notes.forEach( (note) => {
+  let toRenderNotes = notes;
+
+  const url = new URL(window.location.href);
+  const searchNote = url.searchParams.get('search');
+
+  if(searchNote) {
+    toRenderNotes = searchNotes(searchNote);
+  }
+
+  toRenderNotes.forEach( (note) => {
     indexHTML += `
     <div class="sample-box js-sample-box" data-note-id="${note.id}" style="background-color: ${note.design.colorApplied};">
         <div class="title">${note.title}</div>
@@ -14,6 +23,13 @@ function Indexfunction() {
     </div>
     `;
   })
+
+  if(toRenderNotes.length === 0) {
+    indexHTML = `
+    <div class="js-no-note">
+      <p>No notes found for ${searchNote}</p>
+    </div>`;
+  }
 
   document.querySelector('.notes-grid').innerHTML = indexHTML;
 
@@ -127,6 +143,14 @@ function Indexfunction() {
         modal.classList.add('visible');
       }
     })
+  })
+
+  document.querySelector('.js-search-input').addEventListener( 'keypress', (event) => {
+
+    if(event.key === "Enter") {
+      const search = event.target.value;
+      window.location.href = `index.html?search=${encodeURIComponent(search)}`;
+    }
   })
 }
 

@@ -85,3 +85,21 @@ export function getNote(noteId) {
 
   return matchedNote;
 }
+
+export function searchNotes(keyword) {
+
+  let matchedNote = [];
+
+  notes.forEach( (note) => {
+
+    const matchingTitle = note.title.toLowerCase().includes(keyword.toLowerCase());
+
+    const matchingNote = note.note.toLowerCase().includes(keyword.toLowerCase());
+
+    if (matchingTitle || matchingNote) {
+      matchedNote.push(note);
+    }
+  })
+
+  return matchedNote;
+}

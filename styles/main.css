@@ -126,3 +126,9 @@ main {
   overflow: hidden;
   cursor: default;
 }
+
+.js-no-note {
+  font-size: 30px;
+  text-wrap: nowrap;
+  color: gray;
+}
