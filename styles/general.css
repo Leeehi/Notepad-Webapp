@@ -9,13 +9,26 @@
   --font-color: white;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  font-family: League Spartan, Arial;
-  padding-top: 80px;
-  padding: 80px 20px 0 20px;
+@media (max-width: 750px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: League Spartan, Arial;
+    padding-top: 80px;
+    padding: 80px 10px 0 10px;
+  }
+}
+
+@media (min-width: 751px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: League Spartan, Arial;
+    padding-top: 80px;
+    padding: 80px 20px 0 20px;
+  }
 }
 
 html {

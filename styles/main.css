@@ -35,46 +35,159 @@ main {
   position: relative;
 }
 
-/* This is the normal grid style*/
-/* .notes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px;
-} */
+@media (max-width: 750px) {
 
-/* This is the mansory style*/
-.notes-grid {
-  /* display: grid;
-  grid-template-columns: repeat(  4, minmax(300px, 1fr));
-  gap: 20px; */
-  /* align-items: start; important: cards shrink to content height */
-  column-count: 4;       /* number of columns */
-  gap: 20px;      /* spacing between columns */
-  max-width: 100%;          /* prevent overflow */
-  /* margin: 0 auto;           center the grid */
-  padding: 0 20px;          /* add breathing room on sides */
+  .notes-grid {
+    column-count: 2;       /* number of columns */
+    gap: 10px;      /* spacing between columns */
+    max-width: 100%;          /* prevent overflow */
+    padding: 0 10px;          /* add breathing room on sides */
+  }
+
+  .sample-box {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;            /* fit inside column */
+    box-sizing: border-box;   /* include padding in width calculation */
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    padding:20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .sample-box .title {
+    font-size: 20px;
+    white-space: nowrap;       /* force single line */
+    overflow: hidden;          /* hide overflow */
+    text-overflow: ellipsis;   /* show ... */
+    color: black;
+    cursor: default;
+  }
+
+  .sample-box .note {
+    font-size: 13px;
+    color: black;
+    line-height: 13px;
+    margin-top: 10px;
+    display: -webkit-box;        /* create a flex-like box */
+    -webkit-line-clamp: 10;       /* number of lines to show */
+    line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .js-no-note {
+    font-size: 30px;
+    text-wrap: nowrap;
+    color: gray;
+  }
 }
 
-/* This is the normal grid style*/
-/* .sample-box {
-  background-color: rebeccapurple;
-  border-radius: 15px;
-  padding: 20px;
-} */
+@media (min-width: 751px) and (max-width: 999px) {
+  
+  .notes-grid {
+    column-count: 2;       /* number of columns */
+    gap: 10px;      /* spacing between columns */
+    max-width: 100%;          /* prevent overflow */
+    padding: 0 20px;          /* add breathing room on sides */
+  }
+  
+  .sample-box {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;              /* fit inside column */
+    box-sizing: border-box;   /* include padding in width calculation */
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    padding:20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    position: relative;
+  }
 
-/* This is the mansory style*/
-.sample-box {
-  display: inline-block;
-  margin-bottom: 10px;
-  width: 325px;              /* fit inside column */
-  box-sizing: border-box;   /* include padding in width calculation */
-  background-color: rebeccapurple;
-  border-radius: 15px;
-  padding:20px;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease-in-out;
-  position: relative;
+  .sample-box .title {
+    font-size: 30px;
+    white-space: nowrap;       /* force single line */
+    overflow: hidden;          /* hide overflow */
+    text-overflow: ellipsis;   /* show ... */
+    color: black;
+    cursor: default;
+  }
+
+  .sample-box .note {
+    font-size: 18px;
+    color: black;
+    line-height: 20px;
+    margin-top: 10px;
+    display: -webkit-box;        /* create a flex-like box */
+    -webkit-line-clamp: 10;       /* number of lines to show */
+    line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .js-no-note {
+    font-size: 30px;
+    text-wrap: nowrap;
+    color: gray;
+  }
 }
+
+@media (min-width: 1000px) {
+  
+  .notes-grid {
+    column-count: 4;       /* number of columns */
+    gap: 20px;      /* spacing between columns */
+    max-width: 100%;          /* prevent overflow */
+    padding: 0 20px;          /* add breathing room on sides */
+  }
+
+  .sample-box {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;              /* fit inside column */
+    box-sizing: border-box;   /* include padding in width calculation */
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    padding:20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .sample-box .title {
+    font-size: 30px;
+    white-space: nowrap;       /* force single line */
+    overflow: hidden;          /* hide overflow */
+    text-overflow: ellipsis;   /* show ... */
+    color: black;
+    cursor: default;
+  }
+
+  .sample-box .note {
+    font-size: 18px;
+    color: black;
+    line-height: 20px;
+    margin-top: 10px;
+    display: -webkit-box;        /* create a flex-like box */
+    -webkit-line-clamp: 10;       /* number of lines to show */
+    line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .js-no-note {
+    font-size: 30px;
+    text-wrap: nowrap;
+    color: gray;
+  }
+}
+
 
 .delete-note {
   opacity: 0;
@@ -103,32 +216,4 @@ main {
 
 .sample-box:hover {
   border-color: black;
-}
-
-.sample-box .title {
-  font-size: 30px;
-  white-space: nowrap;       /* force single line */
-  overflow: hidden;          /* hide overflow */
-  text-overflow: ellipsis;   /* show ... */
-  color: black;
-  cursor: default;
-}
-
-.sample-box .note {
-  font-size: 18px;
-  color: black;
-  line-height: 20px;
-  margin-top: 10px;
-  display: -webkit-box;        /* create a flex-like box */
-  -webkit-line-clamp: 10;       /* number of lines to show */
-  line-clamp: 10;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  cursor: default;
-}
-
-.js-no-note {
-  font-size: 30px;
-  text-wrap: nowrap;
-  color: gray;
 }

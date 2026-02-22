@@ -24,9 +24,18 @@ header {
   /* background-color: blue; */
 }
 
-.left-side a {
-  font-size: 35px;
-  color: black;
+@media (max-width: 750px) {
+  .left-side a {
+    font-size: 30px;
+    color: black;
+  }
+}
+
+@media (min-width: 751px) {
+  .left-side a {
+    font-size: 35px;
+    color: black;
+  }
 }
 
 .middle {
@@ -76,6 +85,14 @@ header {
   border-radius: 25px;
 }
 
-.right-side div {
-  margin-left: 10px;
+@media (max-width: 750px) {
+  .right-side div {
+    display: none;
+  }
+}
+
+@media (min-width: 751px) {
+  .right-side div {
+    margin-left: 10px;
+  }
 }
