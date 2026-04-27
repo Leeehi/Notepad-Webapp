@@ -1,0 +1,58 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(6px); /* Blur everything behind it */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 98;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal_delete {
+  position: fixed;
+  top: 200px;
+  bottom: 300px;
+  left: 500px;
+  right: 500px;
+  background-color: var(--pale-blue);
+  border-radius: 24px;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal_delete div {
+  margin-top: 10px;
+}
+
+.modal_delete button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.modal_delete button:hover {
+  background-color: hsla(0, 0%, 0%, 0.274);
+}
+
+.modal_delete .delete {
+  color: red;
+}
+
+.modal_overlay.visible, .modal_delete.visible {
+  pointer-events: all;
+  opacity: 1;
+}

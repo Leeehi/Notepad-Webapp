@@ -1,78 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/general.css">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/modal.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/delete_modal.css" />
 
-  <title>Notepad</title>
-</head>
-<body>
+    <title>Notepad</title>
+  </head>
+  <body>
+    <header class="heade-content"></header>
 
+    <section>
+      <button class="create">
+        <img src="./images/icons/plus.svg" alt="create" />
+      </button>
+    </section>
 
-  <header>
-    <div class="left-side">
-      <!-- <img src="./images/icons/hamburger.svg" alt="menu"> -->
-        <a href="index.html">
-          Notepad
-        </a>
-    </div>
-    <div class="middle">
-      <input type="text" class="search-input js-search-input" placeholder="Search">
-      <!-- <img src="./images/icons/search.svg" alt="search"> -->
-    </div>
-    <div class="right-side">
-      <img src="./images/icons/profile.png" alt="profile">
-      <div>Hello User!</div>
-    </div>
-  </header>
+    <main>
+      <div class="notes-grid"></div>
 
-  <section>
-      <button class="create"><img src="./images/icons/plus.svg" alt="create"></button>
-  </section>
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="note-content">
+            <div class="title">
+              <input type="text" class="note-title" placeholder="Title" />
+            </div>
 
-  <main>
-    <div class="notes-grid">
-    </div>
-
-    <div class="modal-overlay">
-      <div class="modal">
-        <div class="note-content">
-          <div class="title">
-            <input type="text" class="note-title" placeholder="Title">
-          </div>
-
-          <div class="body">
-            <textarea class="note-body" rows="4" cols="50" placeholder="Take a note..."></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="dropdown">
-            <label for="color-btn">Color:</label>
-            <button id="color-btn"></button>
-            <div class="dropdown-content">
-              <div class="color-picked" hidden></div>
-              <div class="color-swatch dark-teal" data-color="var(--dark-teal)"></div>
-              <div class="color-swatch light-teal" data-color="var(--light-teal)"></div>
-              <div class="color-swatch light-peach" data-color="var(--light-peach)"></div>
-              <div class="color-swatch warm-terracotta" data-color="var(--warm-terracotta)"></div>
+            <div class="body">
+              <textarea
+                class="note-body"
+                rows="4"
+                cols="50"
+                placeholder="Take a note..."
+              ></textarea>
             </div>
           </div>
-          <div>
-            <button class="save-note">Save</button>
+          <div class="modal-footer">
+            <div class="dropdown">
+              <label for="color-btn">Color:</label>
+              <button id="color-btn"></button>
+              <div class="dropdown-content">
+                <div class="color-picked" hidden></div>
+                <div
+                  class="color-swatch dark-teal"
+                  data-color="var(--dark-teal)"
+                ></div>
+                <div
+                  class="color-swatch light-teal"
+                  data-color="var(--light-teal)"
+                ></div>
+                <div
+                  class="color-swatch light-peach"
+                  data-color="var(--light-peach)"
+                ></div>
+                <div
+                  class="color-swatch warm-terracotta"
+                  data-color="var(--warm-terracotta)"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <button class="save-note">Save</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  
 
-  <script type="module" src="./scripts/index.js"></script>
-</body>
+      <div class="modal_overlay">
+        <div class="modal_delete">
+          Do you really want to delete this note?
+          <div>
+            <button class="no">No</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/header.js"></script>
+  </body>
 </html>

@@ -83,6 +83,7 @@ header {
 .right-side img {
   width: 35px;
   border-radius: 25px;
+  margin-right: 10px;
 }
 
 @media (max-width: 750px) {
@@ -91,8 +92,8 @@ header {
   }
 }
 
-@media (min-width: 751px) {
+/* @media (min-width: 751px) {
   .right-side div {
     margin-left: 10px;
   }
-}
+} */
