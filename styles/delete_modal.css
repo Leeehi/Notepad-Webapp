@@ -1,20 +1,3 @@
-.modal_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-  backdrop-filter: blur(6px); /* Blur everything behind it */
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 98;
-  pointer-events: none;
-  opacity: 0;
-}
-
 .modal_delete {
   position: fixed;
   top: 200px;
@@ -52,7 +35,7 @@
   color: red;
 }
 
-.modal_overlay.visible, .modal_delete.visible {
+.modal-overlay.visible, .modal_delete.visible {
   pointer-events: all;
   opacity: 1;
 }

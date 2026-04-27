@@ -62,6 +62,7 @@ function Indexfunction() {
     if (e.target.classList.contains("modal-overlay")) {
       overlay.classList.remove("visible");
       modal.classList.remove("visible");
+      modalDelete.classList.remove("visible");
     }
   });
 
@@ -69,6 +70,7 @@ function Indexfunction() {
     if (event.key === "Escape" || event.key === "Esc") {
       overlay.classList.remove("visible");
       modal.classList.remove("visible");
+      modalDelete.classList.remove("visible");
     }
   });
 
@@ -123,13 +125,15 @@ function Indexfunction() {
       event.stopPropagation();
       currentNoteId = noteId;
       modalDelete.classList.add("visible");
-      modalOverlay.classList.add("visible");
+      overlay.classList.add("visible");
+      // modalOverlay.classList.add("visible");
     });
   });
 
   buttonNo.addEventListener("click", () => {
     modalDelete.classList.remove("visible");
-    modalOverlay.classList.remove("visible");
+    overlay.classList.remove("visible");
+    // modalOverlay.classList.remove("visible");
     currentNoteId = null;
   });
 
@@ -138,7 +142,8 @@ function Indexfunction() {
     Indexfunction();
     currentNoteId = null;
     modalDelete.classList.remove("visible");
-    modalOverlay.classList.remove("visible");
+    overlay.classList.remove("visible");
+    // modalOverlay.classList.remove("visible");
   });
 
   document.querySelectorAll(".js-sample-box").forEach((noteBox) => {
