@@ -1,5 +1,8 @@
-export let modes = JSON.parse(localStorage.getItem('mode'))
-export let notes = JSON.parse(localStorage.getItem("notes")) || [
+import { notess } from "./notes.js";
+
+export let modes = JSON.parse(localStorage.getItem("mode")) || "off";
+export let notes = notess;
+JSON.parse(localStorage.getItem("notes")) || [
   {
     id: "c3d4e5f6-3333-4444-5555-666677778888",
     title: "Coding Task",

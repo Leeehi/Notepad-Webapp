@@ -1,19 +1,86 @@
-.modal_delete {
-  position: fixed;
-  top: 200px;
-  bottom: 300px;
-  left: 500px;
-  right: 500px;
-  background-color: var(--pale-blue);
-  border-radius: 24px;
-  font-size: 18px;
-  opacity: 0;
-  pointer-events: none;
+@media (max-width: 600px) {
+  .modal_delete {
+    position: fixed;
+    padding: 50px 20px;
+    /* top: 350px;
+    bottom: 300px;
+    left: 100px;
+    right: 100px; */
+    background-color: var(--pale-blue);
+    border-radius: 24px;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .modal_delete {
+    position: fixed;
+    padding: 50px 20px;
+    /* top: 350px;
+    bottom: 300px;
+    left: 150px;
+    right: 150px; */
+    background-color: var(--pale-blue);
+    border-radius: 24px;
+    font-size: 18px;
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 999px) {
+  .modal_delete {
+    position: fixed;
+    padding: 50px 20px;
+    /* top: 350px;
+    bottom: 300px;
+    left: 200px;
+    right: 200px; */
+    background-color: var(--pale-blue);
+    border-radius: 24px;
+    font-size: 18px;
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .modal_delete {
+    position: fixed;
+    padding: 50px 20px;
+    /* top: 350px;
+    bottom: 300px; */
+    /* left: 300px;
+    right: 300px; */
+    background-color: var(--pale-blue);
+    border-radius: 24px;
+    font-size: 18px;
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .modal_delete div {
@@ -35,7 +102,8 @@
   color: red;
 }
 
-.modal-overlay.visible, .modal_delete.visible {
+.modal-overlay.visible,
+.modal_delete.visible {
   pointer-events: all;
   opacity: 1;
 }

@@ -17,26 +17,20 @@ function HeaderFunction() {
       <!-- <img src="./images/icons/search.svg" alt="search"> -->
     </div>
     <div class="right-side">
-      <img class="mode" src="./images/icons/darkmode_${modes}.svg" alt="darkmode_off">
+      <img class="mode" src="./images/icons/darkmode_${modes}.svg" alt="darkmode_${modes}">
       <img src="./images/icons/profile.png" alt="profile">
       <div>Hello User!</div>
     </div>
   `;
 
-  document.querySelector('.heade-content').innerHTML = HeaderHTML;
+  document.querySelector('.header-content').innerHTML = HeaderHTML;
 
   if(modes === "on") {
-    document.querySelector('body').style.backgroundColor = '#101212';
-    document.querySelector('header').style.backgroundColor = '#101212';
-    document.querySelector('header').style.color = 'white';
-    document.querySelector('header a').style.color = 'white';
-
+    document.querySelector('body').classList.add('dark-mode');
+    document.querySelector('.header-content').classList.add('dark-mode');
   } else {
-    document.querySelector('body').style.backgroundColor = '#EDF6F9';
-    document.querySelector('header').style.backgroundColor = '#EDF6F9';
-    document.querySelector('header').style.color = 'black';
-    document.querySelector('header a').style.color = 'black';
-
+    document.querySelector('body').classList.remove('dark-mode');
+    document.querySelector('.header-content').classList.remove('dark-mode');
   }
 
   const mode = document.querySelector('.mode');

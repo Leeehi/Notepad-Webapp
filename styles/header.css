@@ -7,6 +7,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  /*  transition: background-color 0.3s ease, color 0.3s ease; */
 
   height: 70px;
   background-color: var(--pale-blue);
@@ -15,6 +16,10 @@ header {
   z-index: 100;
   box-shadow: 1px 1px 5px hsl(0, 0%, 0%, 0.2);
 }
+
+/* header a {
+  transition: color 0.3s ease;
+} */
 
 .left-side {
   display: flex;
@@ -90,6 +95,15 @@ header {
   .right-side div {
     display: none;
   }
+}
+
+header.dark-mode {
+  background-color: #101212;
+  color: white;
+}
+
+header.dark-mode a {
+  color: white;
 }
 
 /* @media (min-width: 751px) {

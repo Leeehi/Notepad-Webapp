@@ -139,10 +139,10 @@ function Indexfunction() {
 
   buttonDelete.addEventListener("click", () => {
     removeNote(currentNoteId);
-    Indexfunction();
     currentNoteId = null;
     modalDelete.classList.remove("visible");
     overlay.classList.remove("visible");
+    Indexfunction();
     // modalOverlay.classList.remove("visible");
   });
 
@@ -153,9 +153,8 @@ function Indexfunction() {
       let note = getNote(noteId);
 
       if (note) {
-        const title = (document.querySelector(".note-title").value =
-          note.title);
-        const notes = (document.querySelector(".note-body").value = note.note);
+        document.querySelector(".note-title").value = note.title;
+        document.querySelector(".note-body").value = note.note;
         titleBg.style.backgroundColor = note.design.colorApplied;
         noteBg.style.backgroundColor = note.design.colorApplied;
         btn.style.backgroundColor = note.design.colorApplied;

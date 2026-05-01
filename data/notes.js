@@ -1,4 +1,4 @@
-export const notes = [
+export const notess = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     title: "Sample Notes for displaying",

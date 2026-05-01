@@ -10,10 +10,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 98;
+  z-index: 101;
   pointer-events: none;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+.modal {
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.title-bg,
+.note-bg,
+.btn {
+  transition: none; /* apply instantly */
+}
+
 
 @media (max-width: 600px) {
   .modal {
@@ -26,7 +39,7 @@
     background-color: var(--pale-blue);
     box-shadow: 1px 1px 900px black;
     border-radius: 24px;
-    z-index: 99;
+    z-index: 102;
     pointer-events: none;
     opacity: 0;
   }
@@ -43,7 +56,7 @@
     background-color: var(--pale-blue);
     box-shadow: 1px 1px 900px black;
     border-radius: 24px;
-    z-index: 99;
+    z-index: 102;
     pointer-events: none;
     opacity: 0;
   }
@@ -60,7 +73,7 @@
     background-color: var(--pale-blue);
     box-shadow: 1px 1px 900px black;
     border-radius: 24px;
-    z-index: 99;
+    z-index: 102;
     pointer-events: none;
     opacity: 0;
   }
@@ -77,15 +90,21 @@
     background-color: var(--pale-blue);
     box-shadow: 1px 1px 900px black;
     border-radius: 24px;
-    z-index: 99;
+    z-index: 102;
     pointer-events: none;
     opacity: 0;
   }
 }
 
-.modal-overlay.visible, .modal.visible {
+.modal-overlay.visible {
   pointer-events: all;
   opacity: 1;
+}
+
+.modal.visible {
+  pointer-events: all;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .modal-footer {
