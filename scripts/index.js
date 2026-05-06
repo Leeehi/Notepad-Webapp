@@ -63,6 +63,15 @@ function Indexfunction() {
       overlay.classList.remove("visible");
       modal.classList.remove("visible");
       modalDelete.classList.remove("visible");
+
+      let { noteId } = saveButton.dataset;
+
+      const title = document.querySelector(".note-title").value;
+      const note = document.querySelector(".note-body").value;
+      const color = document.querySelector(".color-picked").textContent;
+
+      addNote(title, note, color, noteId);
+      location.reload();
     }
   });
 
@@ -71,6 +80,28 @@ function Indexfunction() {
       overlay.classList.remove("visible");
       modal.classList.remove("visible");
       modalDelete.classList.remove("visible");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+  console.log(event.key);
+});
+
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.key === "n") {
+      event.preventDefault();
+      // console.log("Hi");
+      titleBg.value = "";
+      noteBg.value = "";
+      document.querySelector(".color-picked").textContent = "";
+      [modal, titleBg, noteBg, btn].forEach(
+        (bg) => (bg.style.backgroundColor = "white"),
+      );
+      delete saveButton.dataset.noteId;
+
+      overlay.classList.add("visible");
+      modal.classList.add("visible");
     }
   });
 

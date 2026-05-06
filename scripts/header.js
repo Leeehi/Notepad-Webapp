@@ -47,6 +47,24 @@ function HeaderFunction() {
     turnNightMode();
     HeaderFunction();
   })
+
+  function Testing() {
+
+    for(let i = 0; i < 50; i++) {
+      // console.log(i % 3 === 0 ? "Koo" : `i`);
+      if(i % 3 === 0 && i % 5 === 0) {
+        console.log("KooApps");
+      } else if (i % 3 === 0) {
+        console.log("Koo");
+      } else if (i % 5 === 0) {
+        console.log("Apps");
+      }else {
+        console.log(`i`);
+      }
+    }
+  }
+
+  // Testing();
 }
 
 HeaderFunction();
